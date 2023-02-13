@@ -4,16 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>xyz.mlserver</groupId>
-    <artifactId>plugin</artifactId>
-    <version>${pl.version}</version>
-    <packaging>jar</packaging>
-
     <parent>
         <groupId>xyz.mlserver.packetlistener</groupId>
         <artifactId>parent</artifactId>
         <version>parent</version>
     </parent>
+
+    <artifactId>comp-api</artifactId>
+    <version>${pl.version}</version>
 
     <name>PacketListenerAPI</name>
 
@@ -31,19 +29,34 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.inventivetalent.packetlistener</groupId>
+            <groupId>xyz.mlserver.packetlistener</groupId>
             <artifactId>api</artifactId>
             <version>${pl.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>org.inventivetalent.packetlistener</groupId>
-            <artifactId>1_7</artifactId>
-            <version>${pl.version}</version>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot-api</artifactId>
+            <version>1.8.7-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.inventivetalent.packetlistener</groupId>
-            <artifactId>1_8</artifactId>
-            <version>${pl.version}</version>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit</artifactId>
+            <version>1.7.10-R0.1-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.21</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.25.Final</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
