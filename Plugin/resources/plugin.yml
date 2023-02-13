@@ -1,0 +1,5 @@
+name: PacketListenerAPI
+version: '${project.version}'
+main: xyz.mlserver.packetlistener.PacketListenerPlugin
+
+loadbefore: [ProtocolSupport]
