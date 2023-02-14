@@ -11,8 +11,7 @@
     </parent>
 
     <artifactId>api</artifactId>
-
-    <name>PacketListenerAPI</name>
+    <version>${pl.version}</version>
 
     <properties>
         <!-- 文字コード -->
@@ -48,18 +47,12 @@
         <dependency>
             <groupId>xyz.mlserver</groupId>
             <artifactId>reflectionhelper</artifactId>
-            <version>1.13.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>xyz.mlserver</groupId>
-            <artifactId>apimanager</artifactId>
+            <artifactId>APIManager</artifactId>
             <version>1.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>xyz.mlserver.spiget-update</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.3.0</version>
         </dependency>
     </dependencies>
 </project>

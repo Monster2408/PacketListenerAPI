@@ -2,11 +2,11 @@ package xyz.mlserver.packetlistener.handler;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import org.inventivetalent.reflection.minecraft.Minecraft;
-import org.inventivetalent.reflection.resolver.FieldResolver;
-import org.inventivetalent.reflection.resolver.MethodResolver;
-import org.inventivetalent.reflection.resolver.minecraft.NMSClassResolver;
-import org.inventivetalent.reflection.util.AccessUtil;
+import xyz.mlserver.reflectionhelper.minecraft.Minecraft;
+import xyz.mlserver.reflectionhelper.resolver.FieldResolver;
+import xyz.mlserver.reflectionhelper.resolver.MethodResolver;
+import xyz.mlserver.reflectionhelper.resolver.minecraft.NMSClassResolver;
+import xyz.mlserver.reflectionhelper.util.AccessUtil;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package de.mlserver.packetlistener;
+package xyz.mlserver.packetlistener;
 
 public class Cancellable implements org.bukkit.event.Cancellable {
 

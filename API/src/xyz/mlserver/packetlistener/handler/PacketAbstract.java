@@ -2,8 +2,8 @@ package xyz.mlserver.packetlistener.handler;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
-import org.inventivetalent.packetlistener.channel.ChannelWrapper;
-import org.inventivetalent.reflection.resolver.FieldResolver;
+import xyz.mlserver.packetlistener.channel.ChannelWrapper;
+import xyz.mlserver.reflectionhelper.resolver.FieldResolver;
 
 public abstract class PacketAbstract {
 

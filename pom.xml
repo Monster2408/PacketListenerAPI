@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>xyz.mlserver</groupId>
+    <groupId>xyz.mlserver.packetlistener</groupId>
     <artifactId>parent</artifactId>
     <packaging>pom</packaging>
     <version>parent</version>
@@ -31,6 +31,25 @@
     </properties>
 
     <build>
+        <finalName>PacketListenerAPI_v${pl.version}</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <!--<outputDirectory>target</outputDirectory>-->
+        <resources>
+            <resource>
+                <directory>src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>plugin.yml</include>
+                    <include>config.yml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,18 +71,30 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <artifactSet>
+                                <includes>
+                                    <include>org.mcstats.*</include>
+                                    <include>xyz.mlserver.packetlistener:**</include>
+                                    <include>org.inventivetalent:reflectionhelper**</include>
+                                    <include>org.inventivetalent:apimanager**</include>
+                                    <include>xyz.mlserver.spigot-update:bukkit**</include>
+                                </includes>
+                            </artifactSet>
+                            <relocations>
+                                <relocation>
+                                    <pattern>org.mcstats</pattern>
+                                    <shadedPattern>xyz.mlserver.packetlistener.mcstats</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>xyz.mlserver.reflection</pattern>
+                                    <shadedPattern>xyz.mlserver.packetlistener.reflection</shadedPattern>
+                                </relocation>
+                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
     </build>
 
     <distributionManagement>
@@ -77,11 +108,10 @@
         </snapshotRepository>
     </distributionManagement>
 
-
     <repositories>
         <repository>
-            <id>inventive-repo</id>
-            <url>https://repo.inventivetalent.org/content/groups/public/</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
         <repository>
             <id>md_5-repo</id>
@@ -102,6 +132,10 @@
         <repository>
             <id>techcable-repo</id>
             <url>http://repo.techcable.net/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>minecraft-repo</id>
+            <url>https://libraries.minecraft.net/</url>
         </repository>
     </repositories>
 </project>

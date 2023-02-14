@@ -2,10 +2,8 @@ package xyz.mlserver.packetlistener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.inventivetalent.apihelper.APIManager;
-import org.inventivetalent.packetlistener.metrics.Metrics;
-import org.inventivetalent.update.spiget.SpigetUpdate;
-import org.inventivetalent.update.spiget.UpdateCallback;
+import xyz.mlserver.apimanager.APIManager;
+import xyz.mlserver.packetlistener.metrics.Metrics;
 
 public class PacketListenerPlugin extends JavaPlugin {
 
@@ -24,20 +22,6 @@ public class PacketListenerPlugin extends JavaPlugin {
 			Bukkit.getPluginManager().disablePlugin(this);
 			return;
 		}
-
-		SpigetUpdate updater = new SpigetUpdate(this, 2930);
-		updater.setUserAgent("PacketListenerAPI/" + getDescription().getVersion());
-		updater.checkForUpdate(new UpdateCallback() {
-			@Override
-			public void updateAvailable(String s, String s1, boolean b) {
-				getLogger().info("There is a new version available: https://r.spiget.org/2930");
-			}
-
-			@Override
-			public void upToDate() {
-				getLogger().info("Plugin is up-to-date");
-			}
-		});
 
 		new Metrics(this);
 

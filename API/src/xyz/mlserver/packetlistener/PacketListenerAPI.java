@@ -8,12 +8,12 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
-import org.inventivetalent.apihelper.API;
-import org.inventivetalent.apihelper.APIManager;
-import org.inventivetalent.packetlistener.channel.ChannelWrapper;
-import org.inventivetalent.packetlistener.handler.PacketHandler;
-import org.inventivetalent.packetlistener.handler.ReceivedPacket;
-import org.inventivetalent.packetlistener.handler.SentPacket;
+import xyz.mlserver.apimanager.API;
+import xyz.mlserver.apimanager.APIManager;
+import xyz.mlserver.packetlistener.channel.ChannelWrapper;
+import xyz.mlserver.packetlistener.handler.PacketHandler;
+import xyz.mlserver.packetlistener.handler.ReceivedPacket;
+import xyz.mlserver.packetlistener.handler.SentPacket;
 
 import java.util.logging.Logger;
 

@@ -4,9 +4,9 @@ import io.netty.channel.ChannelDuplexHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;
 import org.bukkit.entity.Player;
-import org.inventivetalent.packetlistener.Cancellable;
-import org.inventivetalent.packetlistener.IPacketListener;
-import org.inventivetalent.reflection.minecraft.Minecraft;
+import xyz.mlserver.packetlistener.Cancellable;
+import xyz.mlserver.packetlistener.IPacketListener;
+import xyz.mlserver.reflectionhelper.minecraft.Minecraft;
 
 import java.lang.reflect.Field;
 import java.net.SocketAddress;
