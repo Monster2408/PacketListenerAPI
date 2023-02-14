@@ -5,10 +5,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>xyz.mlserver</groupId>
-    <artifactId>PacketListenerAPI</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
-
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <version>parent</version>
+    <modules>
+        <module>API</module>
+        <module>1_8</module>
+        <!--<module>Comp-API</module>-->
+        <module>Plugin</module>
+    </modules>
     <name>PacketListenerAPI</name>
 
     <properties>
@@ -21,6 +26,8 @@
 
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <pl.version>1.0.0</pl.version>
     </properties>
 
     <build>
@@ -59,23 +66,42 @@
         </resources>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>sonatype-nexus-releases</id>
+            <url>http://repo.inventivetalent.org/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <url>http://repo.inventivetalent.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
     <repositories>
         <repository>
-            <id>spigotmc-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+            <id>inventive-repo</id>
+            <url>https://repo.inventivetalent.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>md_5-repo</id>
+            <url>http://repo.md-5.net/content/repositories/public/</url>
         </repository>
         <repository>
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>sk89q-repo</id>
+            <url>http://maven.sk89q.com/artifactory/repo/</url>
+        </repository>
+        <repository>
+            <id>techcable-repo</id>
+            <url>http://repo.techcable.net/content/groups/public/</url>
+        </repository>
     </repositories>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
 </project>

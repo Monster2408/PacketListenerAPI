@@ -1,6 +1,6 @@
-package de.mlserver.packetlistener.handler;
+package xyz.mlserver.packetlistener.handler;
 
-import de.mlserver.packetlistener.Cancellable;
+import xyz.mlserver.packetlistener.Cancellable;
 import org.bukkit.entity.Player;
 
 /**

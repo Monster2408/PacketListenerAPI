@@ -1,4 +1,4 @@
-package de.mlserver.packetlistener.handler;
+package xyz.mlserver.packetlistener.handler;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
@@ -23,7 +23,7 @@ import java.util.Map;
         org.inventivetalent.packetlistener.handler.PacketHandler compatibilityHandler = new org.inventivetalent.packetlistener.handler.PacketHandler() {
             @Override
             public void onSend(final org.inventivetalent.packetlistener.handler.SentPacket packet) {
-                handler.onSend(new SentPacket(packet.getPacket(), new de.mlserver.packetlistener.Cancellable() {
+                handler.onSend(new SentPacket(packet.getPacket(), new xyz.mlserver.packetlistener.Cancellable() {
                     @Override
                     public boolean isCancelled() {
                         return packet.isCancelled();
@@ -38,7 +38,7 @@ import java.util.Map;
 
             @Override
             public void onReceive(final org.inventivetalent.packetlistener.handler.ReceivedPacket packet) {
-                handler.onReceive(new ReceivedPacket(packet.getPacket(), new de.mlserver.packetlistener.Cancellable() {
+                handler.onReceive(new ReceivedPacket(packet.getPacket(), new xyz.mlserver.packetlistener.Cancellable() {
                     @Override
                     public boolean isCancelled() {
                         return packet.isCancelled();

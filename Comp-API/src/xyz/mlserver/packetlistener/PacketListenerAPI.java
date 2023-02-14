@@ -1,6 +1,6 @@
-package de.mlserver.packetlistener;
+package xyz.mlserver.packetlistener;
 
-import de.mlserver.packetlistener.handler.PacketHandler;
+import xyz.mlserver.packetlistener.handler.PacketHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 

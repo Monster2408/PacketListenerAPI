@@ -25,6 +25,11 @@
     </dependencies>
 </project>
 ```
+
+# 流用元
+- [ReflectionHelper](https://github.com/InventivetalentDev/ReflectionHelper/tree/3931a0054ac81e5623016a9ba6cfb1d29d980be4)
+- [Spigot-Update](https://github.com/InventivetalentDev/Spiget-Update/tree/abbbb4d4b979dfb86ad040025c7f89fd9602dca6)
+
 # JavaDocの生成
 JavaバージョンとJavadocバージョンの違いでエラーが出たため標準の機能でなく`mvn`を使用することになったため以下コマンドを使用すること
 ```shell

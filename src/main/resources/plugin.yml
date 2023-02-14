@@ -1,3 +1,0 @@
-name: PacketListenerAPI
-version: '${project.version}'
-main: xyz.mlserver.packetlistenerapi.PacketListenerAPI

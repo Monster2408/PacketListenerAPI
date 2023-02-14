@@ -1,4 +1,4 @@
-package de.mlserver.packetlistener;
+package xyz.mlserver.packetlistener;
 
 @Deprecated public class Cancellable {
 
